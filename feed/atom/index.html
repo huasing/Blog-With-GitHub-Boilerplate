@@ -1,2 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>HUASING.XYZ</title><updated>2020-12-19T09:48:29.359531+08:06</updated><author><name>Huasing</name><email> </email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>/logo.png</logo><subtitle>TEST ALL</subtitle></feed>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><id>/</id><title>HUASING.XYZ</title><updated>2020-12-19T09:55:13.249832+08:06</updated><author><name>Huasing</name><email> </email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>/logo.png</logo><subtitle>TEST ALL</subtitle><entry><id>/archives/do-not-save-my-excel/</id><title>通过宏禁止Excel文件的保存</title><updated>2020-12-19T09:55:13.249893+00:00</updated><author><name>&lt;Huasing&gt;</name><email> </email><uri>https://huasing.me</uri></author><content>&lt;p&gt;在工作中，一些Excel表格只用于查询和临时修改，实际并不需要修改保存。为避免一时手残给保存了，就需要做出限制。&lt;!-- more --&gt;&lt;/p&gt;
+&lt;p&gt;VBA&lt;strong&gt;设计模式&lt;/strong&gt;下，在ThisWorkbook中插入VBA代码：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Private Sub Workbook_BeforeClose(Cancel As Boolean)
+Me.Saved = True
+End Sub
+
+Private Sub Workbook_BeforeSave(ByVal SaveAsUI As Boolean, Cancel As Boolean)
+Cancel = True
+End Sub&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存后返回Excel即可。&lt;/p&gt;
+</content><link href="/archives/do-not-save-my-excel/" rel="alternate"/><published>2019-06-21T21:01:58+08:06</published></entry></feed>

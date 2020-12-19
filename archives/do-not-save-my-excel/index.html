@@ -23,18 +23,18 @@
         }
     </script>
     
-<title>关于 - HUASING.XYZ</title>
-<meta name="author" content="Huasing" />
-<meta name="description" content="这里是我的个人博客，通过 GitHub 管理与构建。" />
-<meta property="og:title" content="关于 - HUASING.XYZ" />
-<meta property="og:description" content="这里是我的个人博客，通过 GitHub 管理与构建。" />
+<title>通过宏禁止Excel文件的保存 - HUASING.XYZ</title>
+<meta name="author" content="<Huasing>" />
+<meta name="description" content="Hello World!" />
+<meta property="og:title" content="通过宏禁止Excel文件的保存 - HUASING.XYZ" />
+<meta property="og:description" content="Hello World!" />
 <meta property="og:site_name" content="HUASING.XYZ" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/about/" />
+<meta property="og:url" content="/archives/do-not-save-my-excel/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-12-19T17:50:00-00.00" />
-<meta name="twitter:title" content="关于 - HUASING.XYZ" />
-<meta name="twitter:description" content="这里是我的个人博客，通过 GitHub 管理与构建。" />
+<meta property="article:published_time" content="2019-06-21T21:01:58-00.00" />
+<meta name="twitter:title" content="通过宏禁止Excel文件的保存 - HUASING.XYZ" />
+<meta name="twitter:description" content="Hello World!" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -66,26 +66,63 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">关于</h1>
+            <h1 class="ga-post_title">通过宏禁止Excel文件的保存</h1>
             <span class="ga-post_meta ga-mono">
-                <span>Huasing</span>
+                <span><Huasing></span>
                 <time>
-                    2020-12-19
+                    2019-06-21
                 </time>
+                
+                in <a no-style class="category" href="/category/默认分类/">
+                    默认分类
+                </a>
                 
                 
             </span>
             <div class="ga-content_body">
-                <p>这里是我的个人博客，通过 GitHub 管理与构建。</p>
-<h2>Contact</h2>
-<p>YOU CAN NOT FOUND ME</p>
+                <p>在工作中，一些Excel表格只用于查询和临时修改，实际并不需要修改保存。为避免一时手残给保存了，就需要做出限制。<!-- more --></p>
+<p>VBA<strong>设计模式</strong>下，在ThisWorkbook中插入VBA代码：</p>
+
+<pre><code>Private Sub Workbook_BeforeClose(Cancel As Boolean)
+Me.Saved = True
+End Sub
+
+Private Sub Workbook_BeforeSave(ByVal SaveAsUI As Boolean, Cancel As Boolean)
+Cancel = True
+End Sub</code></pre>
+<p>保存后返回Excel即可。</p>
 
             </div>
         </article>
-        
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/Excel/">#Excel</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/VBA/">#VBA</a>
+    </span>
+    
+</div>
     </section>
 
     
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>没有了</h3>
+        <p class="yue">这是最新的文章</p>
+    </div>
+
+
+    <div class="prev">
+        <h3>没有了</h3>
+        <p class="yue">这是最旧的文章</p>
+    </div>
+
+</section>
+
 
     
 
