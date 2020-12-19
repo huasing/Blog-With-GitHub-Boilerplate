@@ -21,25 +21,26 @@ enable_jsdelivr = {
 # 站点设置
 site_name = "HUASING.XYZ"
 site_logo = "${static_prefix}logo.png"
-site_build_date = "2019-12-18T16:51+08:00"
+site_build_date = "2019-06-21T21:00+08:00"
 author = "Huasing"
 email = " "
 author_homepage = "https://huasing.me"
-description = "TSET ALL"
-key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
+description = "TEST ALL"
+key_words = [' ', ' ', ' ', ' ']
 language = 'zh-CN'
-external_links = [
+"""external_links = [
     {
-        "name": "Maverick",
-        "url": "https://github.com/AlanDecode/Maverick",
-        "brief": "🏄‍ Go My Own Way."
+        "name": " ",
+        "url": " ",
+        "brief": " "
     },
     {
-        "name": "三無計劃",
-        "url": "https://www.imalan.cn",
-        "brief": "熊猫小A的主页。"
+        "name": " ",
+        "url": " ",
+        "brief": " "
     }
 ]
+"""
 nav = [
     {
         "name": "首页",
@@ -58,7 +59,7 @@ nav = [
     }
 ]
 
-social_links = [
+"""social_links = [
     {
         "name": "Twitter",
         "url": "https://twitter.com/AlanDecode",
@@ -75,7 +76,7 @@ social_links = [
         "icon": "gi gi-weibo"
     }
 ]
-
+"""
 head_addon = r'''
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
