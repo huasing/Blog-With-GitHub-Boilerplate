@@ -10,10 +10,10 @@ categories:
 tags: 
   - Excel
   - VBA
-excerpt: Hello World!
+excerpt: 在工作中，一些Excel表格只用于查询和临时修改，实际并不需要修改保存
 ---
 
-在工作中，一些Excel表格只用于查询和临时修改，实际并不需要修改保存。为避免一时手残给保存了，就需要做出限制。<!-- more -->  
+在工作中，一些Excel表格只用于查询和临时修改，实际并不需要修改保存。为避免一时手残给保存了，就需要做出限制。
   
 VBA**设计模式**下，在ThisWorkbook中插入VBA代码：
 ```
